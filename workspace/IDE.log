@@ -1,0 +1,14 @@
+15:27:57 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\m_rah\workspace\temp_xsdb_launch_script.tcl
+15:27:58 INFO  : Registering command handlers for Vitis TCF services
+15:28:02 INFO  : XSCT server has started successfully.
+15:28:04 INFO  : Platform repository initialization has completed.
+15:28:06 INFO  : plnx-install-location is set to ''
+15:28:06 INFO  : Successfully done setting XSCT server connection channel  
+15:28:06 INFO  : Successfully done query RDI_DATADIR 
+15:28:06 INFO  : Successfully done setting workspace for the tool. 
+16:44:02 INFO  : Result from executing command 'getProjects': sdkTEST
+16:44:02 INFO  : Result from executing command 'getPlatforms': 
+16:45:51 INFO  : Result from executing command 'getProjects': sdkTEST
+16:45:51 INFO  : Result from executing command 'getPlatforms': sdkTEST|C:/Users/m_rah/workspace/sdkTEST/export/sdkTEST/sdkTEST.xpfm
+16:52:46 INFO  : Successfully done sdx_reload_mss "C:/Users/m_rah/workspace/sdkTEST/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+16:55:34 INFO  : Checking for BSP changes to sync application flags for project 'Hello_world'...
