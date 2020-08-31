@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Aug 18 15:52:20 2020
+# Process ID: 14948
+# Current directory: C:/Users/m_rah/Desktop/Co-design/RTL x level/RTL x level.runs/synth_1
+# Command line: vivado.exe -log add4bit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source add4bit.tcl
+# Log file: C:/Users/m_rah/Desktop/Co-design/RTL x level/RTL x level.runs/synth_1/add4bit.vds
+# Journal file: C:/Users/m_rah/Desktop/Co-design/RTL x level/RTL x level.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source add4bit.tcl -notrace

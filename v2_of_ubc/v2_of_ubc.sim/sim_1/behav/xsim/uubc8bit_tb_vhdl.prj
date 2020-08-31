@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../v2_of_ubc.srcs/sources_1/new/ubc8bit.vhd" \
+"../../../../v2_of_ubc.srcs/sim_1/new/uubc8bit_tb.vhd" \
+
+# Do not sort compile order
+nosort

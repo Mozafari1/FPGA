@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1598283442">
+  <File Type="PA-TCL" Name="mod_m_count.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="mod_m_count_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="mod_m_count_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mod_m_count.vds"/>
+  <File Type="RDS-UTIL" Name="mod_m_count_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mod_m_count_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="mod_m_count.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mod_m_count_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mod_m_count_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/mod_m_count.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mod_m_count"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Aug 19 16:30:15 2020
+# Process ID: 1116
+# Current directory: C:/Users/m_rah/Desktop/Co-design/expAndSqrt/expAndSqrt.runs/synth_1
+# Command line: vivado.exe -log exp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source exp.tcl
+# Log file: C:/Users/m_rah/Desktop/Co-design/expAndSqrt/expAndSqrt.runs/synth_1/exp.vds
+# Journal file: C:/Users/m_rah/Desktop/Co-design/expAndSqrt/expAndSqrt.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source exp.tcl -notrace
+Command: synth_design -top exp -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22936 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 598.168 ; gain = 178.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'exp' [C:/Users/m_rah/Desktop/Co-design/expAndSqrt/expAndSqrt.srcs/sources_1/new/exp.vhd:40]
+ERROR: [Synth 8-690] width mismatch in assignment; target has 2 bits, source has 3 bits [C:/Users/m_rah/Desktop/Co-design/expAndSqrt/expAndSqrt.srcs/sources_1/new/exp.vhd:44]
+ERROR: [Synth 8-285] failed synthesizing module 'exp' [C:/Users/m_rah/Desktop/Co-design/expAndSqrt/expAndSqrt.srcs/sources_1/new/exp.vhd:40]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 661.652 ; gain = 241.723
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 19 16:30:29 2020...

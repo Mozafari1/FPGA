@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Aug 21 16:02:15 2020
+# Process ID: 24304
+# Current directory: C:/Users/m_rah/Desktop/Co-design/universal_bin_count/universal_bin_count.runs/synth_1
+# Command line: vivado.exe -log uni8bitBC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uni8bitBC.tcl
+# Log file: C:/Users/m_rah/Desktop/Co-design/universal_bin_count/universal_bin_count.runs/synth_1/uni8bitBC.vds
+# Journal file: C:/Users/m_rah/Desktop/Co-design/universal_bin_count/universal_bin_count.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source uni8bitBC.tcl -notrace

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Aug 25 22:38:12 2020
+# Process ID: 21384
+# Current directory: C:/Users/m_rah/Desktop/Co-design/edice_v0/edice_v0.runs/impl_1
+# Command line: vivado.exe -log edice.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source edice.tcl -notrace
+# Log file: C:/Users/m_rah/Desktop/Co-design/edice_v0/edice_v0.runs/impl_1/edice.vdi
+# Journal file: C:/Users/m_rah/Desktop/Co-design/edice_v0/edice_v0.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source edice.tcl -notrace

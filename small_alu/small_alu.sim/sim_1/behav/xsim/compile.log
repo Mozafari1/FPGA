@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/m_rah/Desktop/Co-design/small_alu/small_alu.srcs/sources_1/new/alu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'alu'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/m_rah/Desktop/Co-design/small_alu/small_alu.srcs/sim_1/new/alu_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'alu_tb'

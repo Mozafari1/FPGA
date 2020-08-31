@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1598386826">
+  <File Type="ROUTE-PWR" Name="edice_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="edice.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="edice_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="edice_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="edice.msk"/>
+  <File Type="ROUTE-CLK" Name="edice_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="edice.vdi"/>
+  <File Type="BG-BIT" Name="edice.bit"/>
+  <File Type="BG-DRC" Name="edice.drc"/>
+  <File Type="BG-BGN" Name="edice.bgn"/>
+  <File Type="BG-BIN" Name="edice.bin"/>
+  <File Type="BITSTR-RBT" Name="edice.rbt"/>
+  <File Type="BITSTR-NKY" Name="edice.nky"/>
+  <File Type="BITSTR-BMM" Name="edice_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="edice_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="edice.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="edice_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="edice.sysdef"/>
+  <File Type="ROUTE-DRC-RPX" Name="edice_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="edice.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="edice_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="edice.hwdef"/>
+  <File Type="PLACE-IO" Name="edice_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="edice_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="edice_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="edice_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="edice_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="edice_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="edice_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="edice_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="edice_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="edice_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="edice_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="edice_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="edice_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="edice_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="edice_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="edice_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW" Name="edice_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="edice_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="edice_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="edice_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="edice_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="edice_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="edice_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="edice_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="edice_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="edice_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="edice_methodology_drc_routed.rpx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/edice.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="edice"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/edice.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

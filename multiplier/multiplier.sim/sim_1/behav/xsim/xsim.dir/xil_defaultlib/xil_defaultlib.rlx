@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sim_1/new/mult_tb.vhd,1598435447,vhdl,,,,mult_tb,,,,,,,,
+C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/adder.vhd,1598426009,vhdl,C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/top_level.vhd,,,adder,,,,,,,,
+C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/counter.vhd,1598432717,vhdl,C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/top_level.vhd,,,counter,,,,,,,,
+C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/ctr_path.vhd,1598426126,vhdl,C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/top_level.vhd,,,ctr_path,,,,,,,,
+C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/gen_reg.vhd,1598426172,vhdl,C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/top_level.vhd,,,gen_reg,,,,,,,,
+C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sources_1/new/top_level.vhd,1598436098,vhdl,C:/Users/m_rah/Desktop/Co-design/multiplier/multiplier.srcs/sim_1/new/mult_tb.vhd,,,top_level,,,,,,,,

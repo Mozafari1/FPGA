@@ -1,0 +1,187 @@
+Signal Assignment #1 without Process
+-------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dec2to4 is
+    Port ( in1, in0, en: in STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC
+	 );
+end dec2to4;
+
+architecture darch of dec2to4 is
+begin
+	out3 <=      in1  AND      in0  AND en;
+	out2 <=      in1  AND NOT (in0) AND en;
+	out1 <= NOT (in1) AND      in0  AND en;
+	out0 <= NOT (in1) AND NOT (in0) AND en;
+end darch;
+
+------------------------------------------------------
+Signal assignment #2 with process
+-------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dec2to4 is
+    Port ( in1, in0, en: in STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC
+	 );
+end dec2to4;
+
+architecture arch of dec2to4 is
+begin
+   process (in1,in0,en)
+    begin
+	  out3 <=      in1  AND      in0  AND en;
+	  out2 <=      in1  AND NOT (in0) AND en;
+	  out1 <= NOT (in1) AND      in0  AND en;
+	  out0 <= NOT (in1) AND NOT (in0) AND en;
+    end process;
+end arch;
+-----------------------------------------------------
+Conditional When/else statements
+-----------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dec2to4 is
+    Port ( in1, in0, en: in STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC
+	 );
+end dec2to4;
+
+architecture barch1 of dec2to4 is
+begin
+	out3 <= '1' when (en='1' AND in1='1' AND in0='1') 
+		    else '0';
+	out2 <= '1' when (en='1' AND in1='1' AND in0='0') 
+		    else '0';
+	out1 <= '1' when (en='1' AND in1='0' AND in0='1') 
+		    else '0';
+	out0 <= '1' when (en='1' AND in1='0' AND in0='0') 
+		    else '0';
+end barch1;
+
+--------------------------------------------------------
+Selected Statements
+-------------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dec2to4 is
+    Port ( in1, in0, en: in STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC
+	 );
+end dec2to4;
+
+architecture barch2 of dec2to4 is
+signal sel: std_logic_vector (2 downto 0);
+
+begin
+	sel <= en & in1 & in0;
+	with sel select
+	out3 <= '1' when "111", '0' when others;
+	with sel select
+	out2 <= '1' when "110", '0' when others;
+	with sel select
+	out1 <= '1' when "101", '0' when others;
+	with sel select
+	out0 <= '1' when "100", '0' when others;
+
+end barch2;
+------------------------------------------------------------
+If statement
+-----------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dec2to4 is
+    Port ( in1, in0, en: in STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC
+	 );
+end dec2to4;
+
+architecture if_arch of dec2to4 is
+begin
+   process (in1,in0,en)
+    begin
+	if en='0' then
+	   out3 <='0'; out2 <='0'; out1 <='0'; out0 <='0';
+	elsif (in1='0' and in0='0') then
+	   out3 <='0'; out2 <='0'; out1 <='0'; out0 <='1';
+	elsif (in1='0' and in0='1') then
+	   out3 <='0'; out2 <='0'; out1 <='1'; out0 <='0';
+	elsif (in1='1' and in0='0') then
+	   out3 <='0'; out2 <='1'; out1 <='0'; out0 <='0';
+	else
+	   out3 <='1'; out2 <='0'; out1 <='0'; out0 <='0';
+	end if;
+    end process;
+end if_arch;
+----------------------------------------------------
+Case statement
+--------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dec2to4 is
+    Port ( in1, in0, en: in STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC
+	 );
+end dec2to4;
+
+architecture case_arch of dec2to4 is
+signal sel: std_logic_vector(2 downto 0);
+
+begin
+   sel <= en & in1 & in0;
+   process (sel)
+    begin
+	case sel is
+	   when "000" | "001" | "010" | "011" =>
+	      out3 <='0'; out2 <='0'; out1 <='0'; out0 <='0';
+	   when "100" =>
+	      out3 <='0'; out2 <='0'; out1 <='0'; out0 <='1';
+	   when "101" =>
+	      out3 <='0'; out2 <='0'; out1 <='1'; out0 <='0';
+	   when "110" =>
+	      out3 <='0'; out2 <='1'; out1 <='0'; out0 <='0';
+	   when others =>
+	      out3 <='1'; out2 <='0'; out1 <='0'; out0 <='0';
+	end case;
+    end process;
+end case_arch;
+---------------------------------------------------
+Creating 3:8 dec from 2:4 dec  /////// using component
+-----------------------------------------
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity dec3to8 is
+    Port ( in2, in1, in0: in STD_LOGIC;
+           out7, out6, out5, out4: out STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC
+	 );
+end dec3to8;
+
+architecture sarch1 of dec3to8 is
+--  signal ...
+
+    component dec2to4
+        Port (in1, in0, en: in STD_LOGIC;
+           out3, out2, out1, out0: out STD_LOGIC);
+    end component;
+begin
+    U1: dec2to4 Port Map 
+	(en => in2, in1 => in1, in0 => in0,
+	 out3 => out7, out2 => out6, out1 => out5, out0 => out4);
+    U2: dec2to4 Port Map 
+	(en => not(in2), in1 => in1, in0 => in0,
+	 out3 => out3, out2 => out2, out1 => out1, out0 => out0);
+end sarch1;

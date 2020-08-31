@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/m_rah/Desktop/Co-design/edice_v0/edice_v0.srcs/sources_1/new/edice.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'edice'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/m_rah/Desktop/Co-design/edice_v0/edice_v0.srcs/sim_1/new/edice_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'edice_tb'
